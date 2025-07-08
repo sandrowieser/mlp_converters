@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlp_converters"
+authors = [
+    { name = "Sandro Wieser", email = "sandro.wieser@tuwien.ac.at" },
+]
+description = "File converters for machine learned potentials not widely available"
+license = { text = "Apache License 2.0" }
+requires-python = ">=3.8"
+dependencies = [
+    "ase",
+    "numpy",
+    "scipy",
+]
+readme = "README.md"
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+where = ["./src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "mlp_converters.__version__"}
+
+[project.scripts]
+mlp_convert = "mlp_converters.convert_file:main"
