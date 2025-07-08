@@ -6,13 +6,13 @@ Wieser, S., Zojer, E. Machine learned force-fields for an Ab-initio quality desc
 
 If you use this code, please cite the paper.
 
-Installation:
+## Installation
 
 ```
 pip install -e .
 ```
 
-Usage:
+## Usage
 
 From the VASP force field format `ML_ABN`:
 
