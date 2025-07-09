@@ -484,7 +484,10 @@ class ml_abn:
                         if atom_types is None:
                             self.elems[-1].append(elements[1])
                         else:
-                            self.elems[-1].append(atom_types[int(elements[1])])
+                            try:
+                                self.elems[-1].append(atom_types[int(elements[1])])
+                            except:
+                                raise ValueError("Not enough element information provided to read .cfg file")
             self._check_empty_arrays()
 
         return
